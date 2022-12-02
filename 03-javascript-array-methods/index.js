@@ -10,6 +10,19 @@ students.forEach((element, index, arr) => {
     console.log('arr', arr);
 });
 
+/* output- 
+element John
+index 0
+arr (3) ['John', 'Sara', 'Jack']
+element Sara
+index 1
+arr (3) ['John', 'Sara', 'Jack']
+element Jack
+index 2
+arr (3) ['John', 'Sara', 'Jack']
+
+*/
+
 /* --------------------------------------------------------------------------- */
 
 // Method - 2 (map)
@@ -19,6 +32,7 @@ const numbers = [65, 44, 12, 4];
 const newArr = numbers.map((num) => num * 10)
 console.log(newArr)
 
+// output- [650, 440, 120, 40]
 /* --------------------------------------------------------------------------- */
 
 // Method - 3 (every)
@@ -28,6 +42,7 @@ const ages = [32, 33, 16, 40];
 const isAllAdult = ages.every(age => age > 18)
 console.log(isAllAdult)
 
+// output- false
 /* --------------------------------------------------------------------------- */
 
 // Method - 4 (some)
@@ -36,6 +51,8 @@ console.log(isAllAdult)
 const ages2 = [32, 33, 16, 40];
 const isAllAdult2 = ages2.some(age => age > 18)
 console.log(isAllAdult2)
+
+// output- true
 
 /* --------------------------------------------------------------------------- */
 
@@ -46,6 +63,7 @@ const ages3 = [32, 33, 16, 40];
 const isAllAdult3 = ages3.filter(age => age > 18)
 console.log(isAllAdult3)
 
+// output- [32, 33, 40]
 /* --------------------------------------------------------------------------- */
 
 // Method - 6 (reduce)
@@ -67,9 +85,13 @@ console.log(sumWithInitial);
 
 // Method - 7 (reduceRight)
 // The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
+
+// 100 + 30 + 45 + 3
 const num = [2, 45, 30, 100];
 const result = num.reduceRight((total, currentNum) => total - currentNum);
 console.log(result)
+
+// output: 23 
 
 /* --------------------------------------------------------------------------- */
 
@@ -81,6 +103,8 @@ const found = numArray.find(element => element > 10);
 
 console.log(found);
 
+// output: 12
+
 /* --------------------------------------------------------------------------- */
 
 // Method - 9 (findIndex)
@@ -90,6 +114,8 @@ const numArray2 = [5, 12, 8, 130, 44];
 
 console.log(numArray2.findIndex((element) => element > 13));
 
+// output: 3
+
 /* --------------------------------------------------------------------------- */
 
 // Method - 10 (indexOf)
@@ -97,6 +123,8 @@ console.log(numArray2.findIndex((element) => element > 13));
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let index = fruits.indexOf("Apple");
 console.log(index);
+
+// output: 2
 
 /*
     Array.prototype.indexOf() expects a value as first parameter. This makes it a good choice to find the index in arrays of primitive types (like string, number, or boolean).
@@ -135,6 +163,10 @@ const count = animals2.push('cows');
 console.log(count);
 console.log(animals2);
 
+/* output: 
+4
+['pigs', 'goats', 'sheep', 'cows']
+*/
 /* --------------------------------------------------------------------------- */
 
 // Method - 14 (pop)
@@ -161,9 +193,14 @@ console.log(numArray3);
 // The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 const numArray4 = [1, 2, 3];
 
-console.log(numArray4.unshift());
+console.log(numArray4.shift());
 
 console.log(numArray4);
+
+/* output: 
+1
+[2, 3]
+*/
 
 /* --------------------------------------------------------------------------- */
 
@@ -175,6 +212,10 @@ console.log(numArray5.reverse());
 
 console.log(numArray5);
 
+/* output: 
+[3, 2, 1]
+[3, 2, 1]
+*/
 /* --------------------------------------------------------------------------- */
 
 // Method - 18 (fill)
@@ -199,9 +240,11 @@ console.log(fillArr.fill(6));
 
 const concatArr1 = ['a', 'b', 'c'];
 const concatArr2 = ['d', 'e', 'f'];
-const concatArr3 = array1.concat(array2);
+const concatArr3 = concatArr1.concat(concatArr2);
 
 console.log(concatArr3);
+
+// output: ['a', 'b', 'c', 'd', 'e', 'f']
 
 /* --------------------------------------------------------------------------- */
 
